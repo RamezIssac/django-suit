@@ -287,7 +287,7 @@ class Menu(object):
         match = self.MULTIPLE_MODELS_RE.match(model_def)
         if not match:
             model = self.make_model(model_def, app_name)
-            return [model] if model else []
+            return [model] if model else ['-']
         prefix = match.group(1)
         prefix = self.get_model_name(app_name,prefix)
         return [
